@@ -1,0 +1,312 @@
+/* Defaults */
+body {
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Change the colour theme to better match Amon */
+
+.repo a {
+  background: #e34b30;
+}
+
+@media only screen and (max-width: 959px) {
+  .palette-primary-amon .project {
+    background: #e34b30;
+  }
+}
+
+/* background: pd-navy */
+.palette-primary-amon,
+.palette-primary-amon .footer,
+.palette-primary-amon .header,
+.palette-primary-amon .results .meta,
+.palette-primary-amon .article table th {
+  background: #1f293a;
+}
+
+.palette-primary-amon .article table th {
+  background: #555;
+}
+
+/* font: pd-green */
+.palette-primary-amon .article h1,
+.palette-primary-amon .article h2,
+.palette-primary-amon .drawer .toc a.current,
+.palette-primary-amon .drawer .toc a:focus,
+.palette-primary-amon .drawer .toc a:hover,
+.palette-primary-amon .article a:hover {
+  color: #e34b30;
+}
+
+/* font: pd-navy */
+.palette-primary-amon .article a,
+.palette-primary-amon .article code,
+.palette-primary-amon .article h1,
+.palette-primary-amon .article h2 {
+  color: #1f293a;
+}
+
+/* Selected nav section */
+.palette-primary-amon .drawer .anchor a {
+  border-left: 3px solid #e34b30;
+}
+
+/* Hide the page title, already in the navbar */
+.article h1 {
+  display: none;
+}
+
+
+/* Want the font to be bigger for articles, easier reading. */
+.article {
+	font-size: 1.45em;
+}
+
+/* Too much whitespace at the top, not enough at bottom */
+.article .wrapper {
+  padding: 56px 16px 132px !important;
+}
+
+@media only screen and (min-width: 720px) {
+  .article .wrapper {
+    padding: 70px 24px 126px !important;
+  }
+}
+
+/* Get rid of the whitespace when printing, let people set own margins. */
+@media print {
+  .article .wrapper {
+    padding: 0em !important;
+  }
+}
+
+ul, ol {
+  padding-left: 1em;
+}
+
+/* Expanding border menu */
+.drawer .toc li a {
+	overflow: hidden;
+	position: relative;
+}
+
+.drawer .toc li a:before {
+  display: block;
+  content: '';
+  position: absolute;
+  height: 2em;
+  left: 0px;
+  top: 0.5em;
+  border-left: 5px solid #e34b30;
+  transform: scaleY(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.drawer .toc li a:hover:before {
+	transform: scaleY(1);
+}
+
+/* Don't do it on active menu items */
+.drawer .toc a.current:hover:before,
+.drawer .toc li.anchor a:hover:before {
+  transform: scaleY(0);
+	display: none;
+}
+
+/* Don't overflow horizontally on nav */
+.drawer .toc ul li a {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/* Change the title bar to include the PD logo */
+nav div.mainlogo {
+	width: 15em;
+	display: table-cell;
+}
+
+nav div.mainlogo a {
+  min-height: 5em;
+  margin-bottom: -2.1em;
+  width: 13em;
+
+  background: url(/assets/img/logo-white-text.png) 0em 0.1em no-repeat;
+  background-size: contain;
+}
+
+nav div.mainlogo img {
+  display: none;
+}
+
+/* Admonition */
+.admonition {
+  background: #e34b30;
+}
+.admonition.info {
+  background: #f5a623;
+}
+
+@media print {
+  .admonition {
+    padding: 1em 2em !important;
+  }
+}
+
+/* Typography */
+h4 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.project .logo+.name {
+	font-size: 13px;
+}
+
+span.bad {
+  color: #f00;
+}
+
+span.good {
+  color: #008800;
+}
+
+span.code,
+code {
+  font-family: monospace;
+  border-radius: 4px;
+  background: #f4f4f0;
+  color: #382937 !important;
+}
+li code {
+  padding: 0.5em;
+}
+pre{
+  background: #f4f4f0;
+}
+
+/* Icons */
+.button .icon:hover {
+  transition: color 250ms ease-in-out;
+  color: #e34b30;
+}
+
+/* Images */
+.article .wrapper {
+	overflow: hidden;
+}
+
+/* Center all images */
+.article img {
+    display: block;
+    margin: 0 auto;
+}
+
+.article code {
+  background: #f4f4f0;
+}
+
+/* Header images */
+.article h1 + p + p img {
+  max-width: 110%;
+  margin-left: -2em;
+}
+
+/* Image Captions */
+img + em {
+  position: relative;
+  font-size: 0.8em;
+  margin-right: -2.3em;
+  padding: 0em 1em;
+  float: right;
+  margin-top: -2.1em;
+  color: #000;
+  border-top-left-radius: 3px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Fixes for smaller screen sizes */
+@media only screen and (max-width: 720px) {
+  .article h1 + p + p img {
+    max-width: 120%;
+  }
+
+  .article h1 + p + p img + em {
+    margin-right: -1.4em;
+    margin-top: -2em;
+  }
+}
+
+/* Hack to hide the header images when printing. */
+@media print {
+  .article h1 + p + p img {
+    display: none;
+  }
+
+  .article h1 + p + p img + em {
+    display: none;
+  }
+}
+/* Quotes */
+.article blockquote {
+  border-left: 3px solid #555;
+  background: #f9f9f9;
+  padding: 1em;
+  padding-left: 16px;
+  margin-top: 1em;
+  color: #333;
+  font-style: italic;
+}
+
+.article blockquote p {
+  margin: 0em;
+  padding: 0.5em 0em;
+}
+
+/* Horizontal Rules */
+.article hr {
+  margin-top: 2em;
+  border-top: 2px solid #f4f4f4;
+}
+
+/* Don't care about copyright notice for this project, Apache License. */
+aside.copyright {
+  display: none;
+}
+
+
+/* Embeds */
+iframe {
+  display: block;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+/* Contact summary table */
+#contact-summary {
+  margin-bottom: -2em;
+  background: #fff;
+  color: #000;
+}
+
+
+
+/* 404 Page */
+#error {
+  text-align: center;
+  padding: 0em 5em;
+}
+
+#error h1 {
+  display: block;
+	font-size: 2.5em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border-bottom: 1px solid #eee;
+}
+
+#error p {
+  font-style: italic;
+  color: #555;
+}

@@ -1,0 +1,47 @@
+# Project Information
+site_name: Amon Documentation
+site_author: Simplistic LLC.
+site_favicon: 'assets/img/icon.png'
+site_url: https://amon.cx
+
+# Repository
+repo_name: 'GitHub'
+repo_url: https://github.com/amonapp/amon-docs
+
+# Copyright
+copyright: 'Copyright &copy; Simplistic LLC.'
+
+# Theme
+theme: 'material'
+theme_dir: 'theme'
+extra_css: ['assets/css/extra.css']
+extra:
+  logo: 'assets/img/icon.svg'
+  palette:
+    primary: 'amon'
+    accent: 'blue grey'
+  font:
+    text: 'Open Sans'
+    code: 'Roboto Mono'
+  author:
+    github: 'amonapp'
+    twitter: 'amonapp'
+
+# Contents
+pages:
+  - Getting Started: 'index.md'
+  - Plugins: 'plugins.md'
+  - On-Premise:
+    - Installation: 'onpremise/install.md'
+    - Configuration: 'onpremise/configuration.md'
+    - HA Deployment: 'onpremise/ha.md'
+
+# Analytics
+google_analytics: ['UA-26305832-2', 'auto']
+
+# Extensions
+markdown_extensions:
+  - toc(permalink=¶)
+  - sane_lists:
+  - admonition:
+  - codehilite(css_class=codehighlight)
