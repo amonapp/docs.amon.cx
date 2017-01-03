@@ -30,6 +30,7 @@ extra:
 # Contents
 pages:
   - Getting Started: 'index.md'
+  - Monitoring Agent: 'agent.md'
   - Plugins: 'plugins.md'
   - On-Premise:
     - Installation: 'onpremise/install.md'

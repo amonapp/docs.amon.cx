@@ -1,3 +1,11 @@
+
+
+## Monitoring Agent 
+
+The Amon Agent is a small piece of software that runs on your hosts. Its job is to collect metrics and bring them to Amon so that you can do something useful with your monitoring and performance data. These pages describe how to configure and run the Amon agent
+
+* [Install](agent#install)
+
 ## Plugins
 
 These pages describe how to configure and collect metrics with the Amon agent plugins
@@ -7,6 +15,12 @@ These pages describe how to configure and collect metrics with the Amon agent pl
 * [Sensu](plugins#sensu) - _A guide to installing and collecting metrics from Sensu plugins._
 * [Telegraf](plugins#telegraf) - _A guide to collecting metrics from Telegraf._
 * [Custom Plugins](plugins#custom) - _A guide to writing your own custom plugins._
+
+## Notifications
+
+## Cloud Servers
+
+## API
 
 ## On-Premise
 
