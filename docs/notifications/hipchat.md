@@ -1,5 +1,5 @@
 
-<h2 id="hipchat">Hipchat</h2>
+## Hipchat
 
 <h3>In Hipchat:</h3>
 <ol>
@@ -19,9 +19,4 @@
 		<img src="/assets/img/screenshots/hipchat-step3.jpg" alt="">
 	</li>
 
-	<li>
-		That is it. The next time you Add or Edit your alerts, you can select the Hipchat checkbox and 
-		the next time Amon triggers an alert, it will send the data to Hipchat
-		
-	</li>
 </ol>

@@ -1,4 +1,5 @@
-<h2 id="pagerduty">PagerDuty</h2>
+## PagerDuty
+
 <h3>In PagerDuty:</h3>
 <p>If you don’t already have a PagerDuty Generic API service, you should create one:</p>
 <ol>
@@ -31,10 +32,5 @@
 		In your Amon instance, in Settings, select the <strong>"Notifications"</strong> tab, 
 		paste the <strong>Incident Key</strong> and <strong>Integration Key</strong> from Pagerduty and press <strong>'Save'</strong>
 		<img src="/assets/img/screenshots/pagerduty-amon.jpg" alt="">
-	</li>
-	<li>
-		That is it. The next time you Add or Edit your alerts, you can select the PagerDuty checkbox and 
-		the next time Amon triggers an alert, it will send the data to PagerDuty
-		<img src="/assets/img/screenshots/amon-add-notification.png" alt="">
 	</li>
 </ol>

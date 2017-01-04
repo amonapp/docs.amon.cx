@@ -1,4 +1,4 @@
-<h2 id="slack">Slack</h2>
+## Slack
 
 <h3>In Slack:</h3>
 <ol>
@@ -16,11 +16,5 @@
 	<li>In your Amon instance, in Settings, select the <strong>"Notifications"</strong> tab, 
 		paste the Webhook URL from Slack and press <strong>'Save'</strong>
 		<img src="/assets/img/screenshots/slack-step3.jpg" alt="">
-	</li>
-
-	<li>
-		That is it. The next time you Add or Edit your alerts, you can select the Slack checkbox and 
-		the next time Amon triggers an alert, it will send the data to Slack
-		<img src="/assets/img/screenshots/amon-add-notification.png" alt="">
 	</li>
 </ol>

@@ -1,4 +1,5 @@
-<h2 id="plugins-nginx">Nginx</h2>
+## Nginx 
+
 <p>
 Monitors Nginx, sends to Amon the the following metrics:
 </p>

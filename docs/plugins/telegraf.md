@@ -1,4 +1,5 @@
-<h2 id="plugins-telegraf">Telegraf</h2>
+## Telegraf
+
 <p>Amon is fully compatible with all Telegraf Inputs (<a href="https://github.com/influxdata/telegraf">https://github.com/influxdata/telegraf</a>)
 </p>
 
@@ -10,8 +11,7 @@
 	</li>
 	<li>Update your config file in <code class='language-bash'>/etc/opt/amonagent/plugins-enabled/telegraf.conf</code></li>
 </ol>
-<pre ><code class="language-bash">$ echo '{"config": "/path/to/your/telegraf.conf"}' >
-	 /etc/opt/amonagent/plugins-enabled/nginx.conf
+<pre ><code class="language-bash">$ echo '{"config": "/path/to/your/telegraf.conf"}' > /etc/opt/amonagent/plugins-enabled/telegraf.conf
 
 $ sudo service amonagent restart (or) sudo systemctl restart amonagent
 
@@ -20,9 +20,10 @@ $ /opt/amonagent/amonagent -test-plugin=telegraf
 </code></pre>
 <h3>Telegraf Plugin - Config file</h3>
 
-<p> The configuration file is just the path to your Telegraf config (it is located at <code class='language-bash'>/etc/opt/amonagent/plugins-enabled/telegraf.conf</code>):</p>
-<pre><code class="language-bash">{"config": "/etc/telegraf/telegraf.conf"}
-</code></pre>
+<p> The configuration file is just the path to your Telegraf config (it is located at <code class='language-bash'>/etc/opt/amonagent/plugins-enabled/telegraf.conf</code>)</p>
+
+
+<pre><code class="language-bash">{"config": "/etc/telegraf/telegraf.conf"}</code></pre>
 
 <p>You can see your telegraf plugins on the Servers screen in Amon</p>
 

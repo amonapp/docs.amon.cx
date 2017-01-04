@@ -1,4 +1,5 @@
-<h2 id="plugins-custom">Custom Plugins</h2>
+## Custom Plugins
+
 <p>You can create a custom plugin in any language with several lines of code.
 The simplest plugin for Amon can be 1 line of code. I am going to use Python as an example:
 </p>

@@ -1,4 +1,5 @@
-<h2 id="plugins-mysql">MySQL</h2>
+## MySQL
+
 <p>
 Monitors MySQL, reporting: parses the output from the SHOW STATUS command
 </p>

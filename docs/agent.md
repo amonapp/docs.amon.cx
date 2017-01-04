@@ -48,15 +48,15 @@ The configuration file has the following parameters:
 }
 </code></pre>
 
-## Running the agent
-
+## Running the agent 
+ 
 <ul>
 <li>On sysv systems, the amonagent daemon can be controlled via <code class="language-bash">service amonagent [action]</code>
  </li>
  <li>On systemd systems (such as Ubuntu 15+), the amonagent daemon can be controlled via <code class="language-bash">systemctl [action] amonagent</code>
  </li>
  </ul>
-<p>
+
 
 
 ## Testing the agent
@@ -101,14 +101,13 @@ sudo service amonagent restart (or) sudo systemctl restart amonagent
 </code></pre>
 
 
-## Issues getting the Agent installed
+## Debugging the Agent
 
 <p>
 	If you encountered an issue during the Agent installation please reach out to <a href="mailto:martin@amon.cx">martin@amon.cx</a>
 	with the contents of <span class="code">amonagent-install.log</span>
 </p>
 
-## Issues getting the Agent reporting
 
 <p>
 If you get the Agent installed but you are not seeing any data in Amon, you can troubleshoot in the following manner. <br>

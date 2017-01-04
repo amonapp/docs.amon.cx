@@ -1,4 +1,5 @@
-<h2 id="victorops">VictorOps</h2>
+## VictorOps
+
 <h3>In VictorOps:</h3>
 <ol>
 	<li>In your account, under the Settings tab, select Integrations and click <strong>REST Endpoint</strong>.
@@ -32,12 +33,5 @@
 	<li>In your Amon instance, in Settings, select the <strong>"Notifications"</strong> tab, 
 		paste the Key from OpsGenie and press <strong>'Save'</strong>
 		<img src="/assets/img/screenshots/amon-opsgenie.png" alt="">
-	</li>
-
-
-	<li>
-		That is it. The next time you Add or Edit your alerts, you can select the OpsGenie checkbox and 
-		the next time Amon triggers an alert, it will send the data to OpsGenie
-		<img src="/assets/img/screenshots/amon-add-notification.png" alt="">
 	</li>
 </ol>

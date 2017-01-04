@@ -1,4 +1,4 @@
-
+## StatsD
 <p>
 
 
@@ -11,7 +11,8 @@ This eliminates the need to rollout an additional monitoring stack specifically 
 </p>
 
 
-<h3>Installation</h3>
+### Installation 
+
 <p>The StatsD is preinstalled. To enable it: </p>
 
  <pre><code class="language-bash">$ echo '{"address": ":8125", "delete_timings": true}' > /etc/opt/amonagent/plugins-enabled/statsd.conf
@@ -19,8 +20,9 @@ $ sudo service amonagent restart (or) sudo systemctl restart amonagent</code></p
 
 <p>That is it. You can start sending StatsD metrics from your language/platform of choice and you will see them in Amon.</p>
 
-<h3>Supported Metrics</h3>
-<h6>Counters</h6>
+### Supported Metrics
+
+###  Counters
 <p>Counters are used to measure the frequency of an event per minute, like page views or failed login attempts. You may specify the amount to increment the counter. </p>
 
 <pre><code class="language-python">import statsd
@@ -31,7 +33,7 @@ sc.incr('amon.requests')
 </code></pre>
 
 
-<h6>Timers</h6>
+### Timers
 <p>Timers are used to measure the duration of a task, like database calls or render times.</p>
 
 <pre><code class="language-python">import statsd

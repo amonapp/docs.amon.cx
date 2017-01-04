@@ -1,5 +1,6 @@
-<h2 id="plugins-mongodb">MongoDB</h2>
-<p>Sends to Amon the the following metrics:
+## MongoDB
+
+<p>Sends to Amon the the following metrics: </p>
 <ul>
 	<li>Collection and Index sizes</li>
 	<li>Slow Queries</li>
@@ -52,5 +53,4 @@ $ db.addUser("amon", "your-desired-password", true)</code></pre>
 <h3>MongoDB Plugin - Config file</h3>
 
 <p>Below you can see a complete configuration file (located at <code class='language-bash'>/etc/opt/amonagent/plugins-enabled/mongodb.conf</code>) with all the options:</p>
-<pre><code class="language-bash">{"uri": "mongodb://username:password@host:port/database"}
-</code></pre>
+<pre><code class="language-bash">{"uri": "mongodb://username:password@host:port/database"}</code></pre>

@@ -1,4 +1,5 @@
-<h2 id="plugins-postgresql">PostgreSQL</h2>
+## PostgreSQL
+
 <p>
 Monitors PostgreSQL, sends to Amon the the following metrics:
 </p>

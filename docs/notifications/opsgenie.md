@@ -1,4 +1,5 @@
-<h2 id="notifications-opsgenie">OpsGenie</h2>
+## OpsGenie
+
 <h3>In OpsGenie:</h3>
 <ol>
 	<li>In your account, under the Integrations tab, click <strong>API</strong>.
@@ -15,10 +16,4 @@
 		<img src="/assets/img/screenshots/amon-opsgenie.png" alt="">
 	</li>
 
-
-	<li>
-		That is it. The next time you Add or Edit your alerts, you can select the OpsGenie checkbox and 
-		the next time Amon triggers an alert, it will send the data to OpsGenie
-		<img src="/assets/img/screenshots/amon-add-notification.png" alt="">
-	</li>
 </ol>

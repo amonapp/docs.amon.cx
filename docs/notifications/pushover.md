@@ -1,4 +1,4 @@
-<h2 id="pushover">Pushover</h2>
+## Pushover
 
 <h3>In Pushover:</h3>
 <ol>
@@ -18,9 +18,4 @@
 		<img src="/assets/img/screenshots/amon-pushover.png" alt="">
 	</li>
 
-	<li>
-		That is it. The next time you Add or Edit your alerts, you can select the Pushover checkbox and 
-		the next time Amon triggers an alert, it will send the data to Pushover
-		<img src="/assets/img/screenshots/amon-add-notification.png" alt="">
-	</li>
 </ol>

@@ -55,6 +55,6 @@ These pages describe how to configure and collect metrics with the Amon agent pl
 
 Amon is available as an open source application that you can install on your own infrastructure. This covers everything related to getting it running.
 
-* [Installation](onpremise/install.md) 
-* [Configuration](onpremise/configuration.md) 
-* [High Availability Deployment](onpremise/ha.md)
+* [Installation](onpremise#install) 
+* [Configuration](onpremise#configuration) 
+* [High Availability Deployment](onpremise#ha)

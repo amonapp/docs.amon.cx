@@ -1,4 +1,5 @@
-<h2 id="plugins-sensu">Sensu</h2>
+## Sensu
+
 <p>Amon is fully compatible with all Sensu Plugins (<a href="https://github.com/sensu-plugins">https://github.com/sensu-plugins</a>)
 </p>
 
@@ -6,7 +7,7 @@
 <p></p>
 <ol>
 	<li>First install your desired Sensu Plugin. I am going to use the <code class="language-bash">sensu-plugins-io-checks</code> as an example. (<a href="https://github.com/sensu-plugins/sensu-plugins-io-checks">https://github.com/sensu-plugins/sensu-plugins-io-checks</a>)
-    <pre ><code class="language-bash">apt-get install ruby ruby-dev
+<pre ><code class="language-bash">apt-get install ruby ruby-dev
 gem install sensu-plugins-io-checks
 
 # Test the plugin
