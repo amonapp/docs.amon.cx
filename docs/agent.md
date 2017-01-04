@@ -1,9 +1,8 @@
-<h2>Server monitoring</h2>
-<h3 id='monitoring-install'>Getting started with the Amon agent</h3>
-<p>The Amon Agent is a small piece of software that runs on your hosts. Its job is to collect metrics and bring them to Amon so that you can do something useful with your
-monitoring and performance data.
+<p>The Amon Agent is a small piece of software that runs on your hosts. Its job is to collect metrics and send them to the Amon Server.
 </p>
-<h3>Installing the agent</h3>
+
+## Installing the agent
+
 <p>
 	Amon has a <a href="https://github.com/amonapp/amonagent-go">single binary collector agent</a>, written in Go.
 	<br><br>
@@ -20,7 +19,9 @@ monitoring and performance data.
 	    The Amon agent to /opt/amonagent/amonagent and /usr/bin/amonagent (You can call amonagent from anywhere)
 	</li>
 </ol>
-<h3 id='monitoring-config'>Agent configuration</h3>
+
+## Agent configuration
+
 <p>The Amon agent has a single configuration file , which you can find at <span class="code">/etc/opt/amonagent/amonagent.conf</span>.
 The configuration file is in JSON, so after editing it, please check if the syntax is valid at:
 <a href="http://jsonlint.com/">http://jsonlint.com/</a>.
@@ -47,7 +48,8 @@ The configuration file has the following parameters:
 }
 </code></pre>
 
-<h3 id='monitoring-running'>Running the agent</h3>
+## Running the agent
+
 <ul>
 <li>On sysv systems, the amonagent daemon can be controlled via <code class="language-bash">service amonagent [action]</code>
  </li>
@@ -57,7 +59,7 @@ The configuration file has the following parameters:
 <p>
 
 
-<h3 id='monitoring-testing'>Testing the agent</h3>
+## Testing the agent
 
 <p>
 The agent executable is located in
@@ -68,7 +70,8 @@ The agent executable is located in
   </li>
 </ul>
 
-<h3 id='monitoring-manual-install'>Manually installing the agent</h3>
+## Manually installing the agent
+
 <p>If the automatic installer fails, you can easily install the agent manually by pasting the following commands in the terminal:
 </p>
 <pre ><code class="language-bash">
@@ -97,12 +100,13 @@ sudo service amonagent restart (or) sudo systemctl restart amonagent
 </code></pre>
 
 
-<h3 id='monitoring-issues'>Issues getting the Agent installed</h3>
+## Issues getting the Agent installed
+
 <p>
 	If you encountered an issue during the Agent installation please reach out to <a href="mailto:martin@amon.cx">martin@amon.cx</a>
 	with the contents of <span class="code">amonagent-install.log</span>
 </p>
-<h3>Issues getting the Agent reporting</h3>
+<h3>Issues getting the Agent reporting
 <p>
 If you get the Agent installed but you are not seeing any data in Amon, you can troubleshoot in the following manner. <br>
 First, run the <strong>status</strong> command - <code class="language-bash">sudo service amonagent status (or) sudo systemctl status amonagent</code>.
