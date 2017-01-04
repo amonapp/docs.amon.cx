@@ -32,6 +32,8 @@ pages:
   - Getting Started: 'index.md'
   - Monitoring Agent: 'agent.md'
   - Plugins: 'plugins.md'
+  - Notifications: 'notifications.md'
+  - Cloud Servers: 'cloudservers.md'
   - On-Premise:
     - Installation: 'onpremise/install.md'
     - Configuration: 'onpremise/configuration.md'
@@ -46,3 +48,4 @@ markdown_extensions:
   - sane_lists:
   - admonition:
   - codehilite(css_class=codehighlight)
+  - markdown_include.include:
