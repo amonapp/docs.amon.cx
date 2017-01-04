@@ -1,11 +1,11 @@
 ## Webhooks
 
-<p>Starting with version 3.3 Amon supports Webhooks, which make it easy for
+Starting with version 3.3 Amon supports Webhooks, which make it easy for
  you to integrate more sophisticated alerting platforms like PagerDuty, VictorOps.
 
 <br><br>
 To create a webhook, go to Settings/Webhooks and set an URL. For additional protection,
- you can set a secret passphrase which is going to be sent with the request.</p>
+ you can set a secret passphrase which is going to be sent with the request.
 
 <pre><code class="language-python">{
 	"trigger": {"to": 1428223320, "from": 1428223286, "average_value": 63.0}, 
@@ -20,4 +20,4 @@ To create a webhook, go to Settings/Webhooks and set an URL. For additional prot
 	"process": {"name": "ruby"}
 	"secret": "secretpass"
 }
-</code></pre>
+</code></pre>>

@@ -35,7 +35,6 @@ body {
   background: #555;
 }
 
-/* font: pd-green */
 .palette-primary-amon .article h1,
 .palette-primary-amon .article h2,
 .palette-primary-amon .drawer .toc a.current,
@@ -45,13 +44,17 @@ body {
   color: #e34b30;
 }
 
-/* font: pd-navy */
 .palette-primary-amon .article a,
 .palette-primary-amon .article code,
 .palette-primary-amon .article h1,
 .palette-primary-amon .article h2 {
   color: #1f293a;
 }
+
+.palette-primary-amon .article .headerlink {
+  color: rgba(0,0,0,.26);
+}
+
 
 /* Selected nav section */
 .palette-primary-amon .drawer .anchor a {
@@ -62,7 +65,6 @@ body {
 .article h1 {
   display: none;
 }
-
 
 .article {
 	font-size: 1.5em;

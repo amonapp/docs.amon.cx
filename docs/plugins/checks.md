@@ -2,11 +2,14 @@
 
 Amon checks allow you to monitor services or measure resources.
 
-<br><br>
-Checks are essentially commands (or scripts) that output data to STDOUT or STDERR and produce an exit status code to indicate a state. Common exit status codes used are 0 for OK, 1 for WARNING, 2 for <code class="language-bash">CRITICAL</code>, and 3 or greater to indicate <code class="language-bash">UNKNOWN</code> or <code class="language-bash">CUSTOM</code>. <br><br> Amon checks use the same specification as Nagios and Sensu, therefore, Nagios and Sensu check plugins may be used with Amon.
+
+Checks are essentially commands (or scripts) that output data to STDOUT or STDERR and produce an exit status code to indicate a state. Common exit status codes used are 0 for OK, 1 for WARNING, 2 for <code class="language-bash">CRITICAL</code>, and 3 or greater to indicate <code class="language-bash">UNKNOWN</code> or <code class="language-bash">CUSTOM</code>. 
 
 
-<h2 id='nagios'>Nagios Checks</h2>
+Amon checks use the same specification as Nagios and Sensu, therefore, Nagios and Sensu check plugins may be used with Amon.
+
+### Nagios Checks
+
 Amon is fully compatible with any plugin from the <a href="https://exchange.nagios.org/">Nagios Exchange</a> or the
 <a href="https://www.monitoring-plugins.org/index.html">nagios-plugins/monitoring-plugins</a> already available for install in your distro.
 To get started on Ubuntu for example, you can do the following:
@@ -38,7 +41,8 @@ Optionally you can setup alerts on any check and get notified on Slack/Hipchat/E
 
 <div class="image_wrapper"><img src="/assets/img/screenshots/health_checks-add-nagios-alerts.png" alt=""></div>
 
-<h2 id='sensu'>Sensu Checks</h2>
+### Sensu Checks
+
 Amon is fully compatible with Sensu checks. You can use any check from <a href="https://github.com/sensu-plugins">https://github.com/sensu-plugins</a>
 
 <div class="image_wrapper"><img src="/assets/img/screenshots/health_checks-sensu-format.png" alt=""></div>
@@ -71,11 +75,11 @@ amonagent -test-plugin=checks
 </code></pre>
 
 That is it. You can see the results of your Sensu check(s) in Amon
-<div class="image_wrapper"><img src="/assets/img/screenshots/health_checks-sensu-alerts.png" alt=""></div>
+<img src="/assets/img/screenshots/health_checks-sensu-alerts.png" alt="">
 
 Optionally you can setup alerts on any check and get notified on Slack/Hipchat/Email, etc.
 
-<div class="image_wrapper"><img src="/assets/img/screenshots/health_checks-add-sensu-alerts.png" alt=""></div>
+<img src="/assets/img/screenshots/health_checks-add-sensu-alerts.png" alt="">
 
 
 ### Custom check plugin

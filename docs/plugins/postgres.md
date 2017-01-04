@@ -22,7 +22,7 @@ $ create user amon with password 'your-desired-password';
 $ grant SELECT ON pg_stat_database to amon;
 </code></pre>
 	</li>
-	<li>Install <strong>postgresql-contrib</strong> and enable the <strong>pg_stat_statements</strong> extension
+	<li>Install **postgresql-contrib** and enable the **pg_stat_statements** extension
 <pre ><code class="language-bash">$ sudo yum/apt-get install postgresql-contrib
 $ sudo -u postgres psql
 $ CREATE EXTENSION pg_stat_statements;

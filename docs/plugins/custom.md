@@ -6,8 +6,10 @@ The simplest plugin for Amon can be 1 line of code. I am going to use Python as 
 
 
 <ol>
-    <li><pre><code class="language-python"># your-metrics.py
-print requests.per_second:10|gauge</code></pre></li>
+    <li>
+    <pre><code class="language-python"># your-metrics.py
+print requests.per_second:10|gauge</code></pre>
+    </li>
     <li>Add the command that can execute this file in <code class='language-bash'>/etc/opt/amonagent/plugins-enabled/custom.conf</code>
 <pre><code class="language-bash">[{ "command":"python /path/to/your-metrics.py", "name":"requests"},]</code></pre>
     </li>

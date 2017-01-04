@@ -14,11 +14,9 @@
 <br><br>
 	By default the script installs:
 </p>
-<ol>
-	<li>
-	    The Amon agent to /opt/amonagent/amonagent and /usr/bin/amonagent (You can call amonagent from anywhere)
-	</li>
-</ol>
+
+* The Amon agent to /opt/amonagent/amonagent and /usr/bin/amonagent (You can call amonagent from anywhere)
+
 
 ## Agent configuration
 
@@ -28,18 +26,12 @@ The configuration file is in JSON, so after editing it, please check if the synt
 <br><br>
 The configuration file has the following parameters:
 </p>
-<ul>
-	<li>
-	  <strong>api_key</strong> - valid API key.
-	</li>
-	<li>
-	  <strong>amon_instance</strong> - The IP Address where your Amon instance is running. This is where the agent will send data.
-	</li>
-	<li>
-	  <strong>interval</strong> - (Optional) How often to gather metrics. In seconds, defaults to 60 seconds.
-	</li>
 
-</ul>
+* **api_key** - valid API key.
+* **amon_instance** - The URL Address where your Amon instance is running. This is where the agent will send data.
+* **interval** - (Optional) How often to gather metrics. In seconds, defaults to 60 seconds.
+
+
 <p>Below you can see a complete configuration file with all the options:</p>
 <pre><code class="language-bash">{
 "api_key": "your-api-key",
@@ -50,12 +42,9 @@ The configuration file has the following parameters:
 
 ## Running the agent 
  
-<ul>
-<li>On sysv systems, the amonagent daemon can be controlled via <code class="language-bash">service amonagent [action]</code>
- </li>
- <li>On systemd systems (such as Ubuntu 15+), the amonagent daemon can be controlled via <code class="language-bash">systemctl [action] amonagent</code>
- </li>
- </ul>
+* On sysv systems, the amonagent daemon can be controlled via <code class="language-bash">service amonagent [action]</code>
+* On systemd systems (such as Ubuntu 15+), the amonagent daemon can be controlled via <code class="language-bash">systemctl [action] amonagent</code>
+
 
 
 
@@ -111,7 +100,7 @@ sudo service amonagent restart (or) sudo systemctl restart amonagent
 
 <p>
 If you get the Agent installed but you are not seeing any data in Amon, you can troubleshoot in the following manner. <br>
-First, run the <strong>status</strong> command - <code class="language-bash">sudo service amonagent status (or) sudo systemctl status amonagent</code>.
+First, run the **status** command - <code class="language-bash">sudo service amonagent status (or) sudo systemctl status amonagent</code>.
 <br><br>
 If the agent is running, check if the Amon API is accessible from your server:
 </p>

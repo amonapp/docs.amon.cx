@@ -3,11 +3,9 @@
 The amonagent is a single golang binary. There is nothing to install and all dependencies are already bundled in.
 To enable a plugin, the only thing you have to do is edit the configuration file in <code class="language-bash">/etc/opt/amonagent/plugins-enabled/{plugin}.conf</code> and restart the agent
 
-<ol>
-    <li>To list all available plugins run <code class="language-bash">/opt/amonagent/amonagent -list-plugins</code></li>
-    <li>To test a plugin run <code class="language-bash">/opt/amonagent/amonagent -test-plugin={name}</code></li>
-    <li>To display all available configuration option for a plugin run <code class="language-bash">/opt/amonagent/amonagent -plugin-config={name}</code></li>
-</ol>
+* To list all available plugins run <code class="language-bash">/opt/amonagent/amonagent -list-plugins</code>
+* To test a plugin run <code class="language-bash">/opt/amonagent/amonagent -test-plugin={name}</code>
+* To display all available configuration option for a plugin run <code class="language-bash">/opt/amonagent/amonagent -plugin-config={name}</code>
 
 
 {!docs/plugins/statsd.md!}

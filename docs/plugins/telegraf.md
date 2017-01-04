@@ -18,7 +18,8 @@ $ sudo service amonagent restart (or) sudo systemctl restart amonagent
 # Optionally you can test the data collected by the plugin with:
 $ /opt/amonagent/amonagent -test-plugin=telegraf
 </code></pre>
-<h3>Telegraf Plugin - Config file</h3>
+
+###  Telegraf Plugin - Config file
 
 <p> The configuration file is just the path to your Telegraf config (it is located at <code class='language-bash'>/etc/opt/amonagent/plugins-enabled/telegraf.conf</code>)</p>
 
@@ -27,4 +28,4 @@ $ /opt/amonagent/amonagent -test-plugin=telegraf
 
 <p>You can see your telegraf plugins on the Servers screen in Amon</p>
 
-<div class="image_wrapper"><img src="/assets/img/screenshots/telegraf.png" alt=""></div>
+<div class="image_wrapper"><img src="/assets/img/screenshots/telegraf.png" alt=""></div>>

@@ -10,11 +10,11 @@ one by one from the Amon Dasbhoard.
 <h3>In Amazon: </h3>
 <ol>
 	<li>
-		On your Amazon Dashboard, click on <strong>"Identify & Access Management"</strong>
+		On your Amazon Dashboard, click on **"Identify & Access Management"**
 		<img src="/assets/img/screenshots/amazon-step-1.png" alt="">
 	</li>
 	<li>
-		Click on <strong>Group</strong>, <strong>Create New Group</strong>
+		Click on **Group**, **Create New Group**
 		<img src="/assets/img/screenshots/amazon-step-2.png" alt="">
 	</li>
 	<li>
@@ -22,7 +22,7 @@ one by one from the Amon Dasbhoard.
 		<img src="/assets/img/screenshots/amazon-step-3.png" alt="">
 	</li>
 	<li>
-		Select Group Policies for the Group, Amon requires only <strong>AmazonEC2ReadOnlyAccess</strong>
+		Select Group Policies for the Group, Amon requires only **AmazonEC2ReadOnlyAccess**
 		<img src="/assets/img/screenshots/amazon-step-4.png" alt="">
 	</li>
 	<li>
@@ -42,8 +42,8 @@ one by one from the Amon Dasbhoard.
 </ol>
 <h3>In Amon:</h3>
 <ol>
-	<li>Navigate to the <strong>Servers</strong> tab, click <strong>Cloud servers</strong> and select <strong>Amazon</strong>,
-	paste your <strong>Access Key ID</strong> and <strong>Secret Access Key</strong> and click <strong>Sync</strong> 
+	<li>Navigate to the **Servers** tab, click **Cloud servers** and select **Amazon**,
+	paste your **Access Key ID** and **Secret Access Key** and click **Sync** 
 	<img src="/assets/img/screenshots/amon-amazon.png" alt="">
 	</li>
 </ol>
@@ -54,15 +54,15 @@ one by one from the Amon Dasbhoard.
 </p>
 <h3>In DigitalOcean:</h3>
 <ol>
-	<li>In your DigitalOcean dashboard, click <strong>API</strong> 
+	<li>In your DigitalOcean dashboard, click **API** 
 		<img src="/assets/img/screenshots/digitalocean-step-1.jpg" alt="">
 	</li>
-	<li>Generate a new <strong>Read only token</strong></li>
+	<li>Generate a new **Read only token**</li>
 </ol>
 <h3>In Amon:</h3>
 <ol>
-	<li>Navigate to the <strong>Servers</strong> tab, click <strong>Cloud servers</strong> and select <strong>DigitalOcean</strong>,
-	paste your <strong>DigitalOcean token</strong> and click <strong>Sync</strong> 
+	<li>Navigate to the **Servers** tab, click **Cloud servers** and select **DigitalOcean**,
+	paste your **DigitalOcean token** and click **Sync** 
 		<img src="/assets/img/screenshots/amon-digitalocean.png" alt="">
 	</li>
 </ol>
@@ -75,19 +75,19 @@ With Amon's Google Compute Cloud integration you can automatically sync the info
 <h3>In Google Compute:</h3>
 <ol>
 	<li>
-		Click on <strong>Apis & Auth</strong>. 
+		Click on **Apis & Auth**. 
 		<img src="/assets/img/screenshots/google-step-1.jpg" alt="">
 	</li>
 	<li>
-		Click on <strong>Create new client ID</strong>, <strong>Service Account</strong> 
+		Click on **Create new client ID**, **Service Account** 
 		<img src="/assets/img/screenshots/google-step-2.jpg" alt="">
 	</li>
 </ol>
 <h3>In Amon:</h3>
 <ol>
-	<li>Navigate to the <strong>Servers</strong> tab, click <strong>Cloud servers</strong> and select <strong>Google Compute</strong>,
-	paste your <strong>Service account email address</strong>, <strong>Your project ID from the first screenshot</strong> 
-	and upload your <strong>JSON key</strong>. Finally click Sync
+	<li>Navigate to the **Servers** tab, click **Cloud servers** and select **Google Compute**,
+	paste your **Service account email address**, **Your project ID from the first screenshot** 
+	and upload your **JSON key**. Finally click Sync
 		<img src="/assets/img/screenshots/amon-google.jpg" alt="">
 	</li>
 </ol>
@@ -98,14 +98,14 @@ With Amon's Rackspace integration you can automatically sync the information abo
 <h3>In Rackspace:</h3>
 <ol>
 	<li>
-		Click on <strong>Account</strong>, <strong>Account Settings</strong>, copy your API Key
+		Click on **Account**, **Account Settings**, copy your API Key
 		<img src="/assets/img/screenshots/rackspace-api-key.png" alt="">
 	</li>
 </ol>
 <h3>In Amon:</h3>
 <ol>
-	<li>Navigate to the <strong>Servers</strong> tab, click <strong>Cloud servers</strong> and select <strong>Rackspace</strong>,
-	paste your <strong>API Key</strong> and click <strong>Sync</strong> 
+	<li>Navigate to the **Servers** tab, click **Cloud servers** and select **Rackspace**,
+	paste your **API Key** and click **Sync** 
 		<img src="/assets/img/screenshots/amon-rackspace.png" alt="">
 	</li>
 </ol>
@@ -117,14 +117,14 @@ one by one from the Amon Dasbhoard.
 </p>
 <h3>In Linode:</h3>
 <ol>
-	<li>Click on <strong>my profile</strong>, click <strong>API Keys </strong> and create a new API Key
+	<li>Click on **my profile**, click **API Keys ** and create a new API Key
 		<img src="/assets/img/screenshots/linode-api-key.png" alt="">
 	</li>
 </ol>
 <h3>In Amon:</h3>
 <ol>
-	<li>Navigate to the <strong>Servers</strong> tab, click <strong>Cloud servers</strong> and select <strong>Linode</strong>,
-	paste your <strong>API Key ID</strong> and click <strong>Sync</strong> 
+	<li>Navigate to the **Servers** tab, click **Cloud servers** and select **Linode**,
+	paste your **API Key ID** and click **Sync** 
 		<img src="/assets/img/screenshots/amon-linode.png" alt="">
 	</li>
 </ol>
