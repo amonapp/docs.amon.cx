@@ -70,6 +70,7 @@ The agent executable is located in
   </li>
 </ul>
 
+
 ## Manually installing the agent
 
 <p>If the automatic installer fails, you can easily install the agent manually by pasting the following commands in the terminal:
@@ -106,7 +107,9 @@ sudo service amonagent restart (or) sudo systemctl restart amonagent
 	If you encountered an issue during the Agent installation please reach out to <a href="mailto:martin@amon.cx">martin@amon.cx</a>
 	with the contents of <span class="code">amonagent-install.log</span>
 </p>
-<h3>Issues getting the Agent reporting
+
+## Issues getting the Agent reporting
+
 <p>
 If you get the Agent installed but you are not seeing any data in Amon, you can troubleshoot in the following manner. <br>
 First, run the <strong>status</strong> command - <code class="language-bash">sudo service amonagent status (or) sudo systemctl status amonagent</code>.

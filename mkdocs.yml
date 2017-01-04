@@ -34,10 +34,8 @@ pages:
   - Plugins: 'plugins.md'
   - Notifications: 'notifications.md'
   - Cloud Servers: 'cloudservers.md'
-  - On-Premise:
-    - Installation: 'onpremise/install.md'
-    - Configuration: 'onpremise/configuration.md'
-    - HA Deployment: 'onpremise/ha.md'
+  - API: 'api.md'
+  - On-Premise: 'onpremise.md'
 
 # Analytics
 google_analytics: ['UA-26305832-2', 'auto']

@@ -9,7 +9,13 @@ body {
 .repo a {
   background: #e34b30;
 }
-
+.backdrop {
+  background: white;
+}
+.backdrop-paper:after {
+  border: 3px solid #f5f2f9;
+    box-shadow: 0 4px 0px rgba(0,0,0,0), 0 4px 12px rgba(0,0,0,0);
+}
 @media only screen and (max-width: 959px) {
   .palette-primary-amon .project {
     background: #e34b30;
@@ -49,7 +55,7 @@ body {
 
 /* Selected nav section */
 .palette-primary-amon .drawer .anchor a {
-  border-left: 3px solid #e34b30;
+  border-left: 0;
 }
 
 /* Hide the page title, already in the navbar */
@@ -58,9 +64,8 @@ body {
 }
 
 
-/* Want the font to be bigger for articles, easier reading. */
 .article {
-	font-size: 1.45em;
+	font-size: 1.5em;
 }
 
 /* Too much whitespace at the top, not enough at bottom */
@@ -83,12 +88,20 @@ body {
 
 ul, ol {
   padding-left: 1em;
+  padding-top: 1em;
+}
+.drawer .toc li ul {
+  padding-left: 0;
+}
+.drawer {
+  font-size: 14px;
 }
 
 /* Expanding border menu */
 .drawer .toc li a {
 	overflow: hidden;
 	position: relative;
+  border-left: 0;
 }
 
 .drawer .toc li a:before {
@@ -175,14 +188,14 @@ span.code,
 code {
   font-family: monospace;
   border-radius: 4px;
-  background: #f4f4f0;
+  background: #f5f2f9;
   color: #382937 !important;
 }
 li code {
   padding: 0.5em;
 }
 pre{
-  background: #f4f4f0;
+  background: #f5f2f9;
 }
 
 /* Icons */
@@ -203,7 +216,7 @@ pre{
 }
 
 .article code {
-  background: #f4f4f0;
+  background: #f5f2f9;
 }
 
 /* Header images */
