@@ -51,6 +51,12 @@ These pages describe how to configure and collect metrics with the Amon agent pl
 
 ## API
 
+* [Servers](api#servers)
+* [Alerts](api#alerts)
+* [Cloud Servers](api#cloud-servers)
+* [Health Checks](api#checks)
+
+
 ## On-Premise
 
 Amon is available as an open source application that you can install on your own infrastructure. This covers everything related to getting it running.

@@ -203,6 +203,8 @@ li code {
 }
 pre{
   background: #f5f2f9;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 /* Icons */

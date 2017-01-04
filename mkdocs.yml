@@ -45,5 +45,4 @@ markdown_extensions:
   - toc(permalink=¶)
   - sane_lists:
   - admonition:
-  - codehilite(css_class=codehighlight)
   - markdown_include.include:

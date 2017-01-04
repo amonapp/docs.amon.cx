@@ -1,14 +1,15 @@
-<section id="api">
-<h3>API</h3>
 <p>Any tool that is fluent in HTTP can communicate with the API simply by requesting the correct URI. 
 The interface responds to different methods depending on the action required.</p>
-<h4 id="api-servers">Servers</h4>
-<h3>List</h3>
-<pre><code class='language-python'>
-# Request
+
+## Servers
+
+### List Servers
+
+```javascript
+// Request
 GET https://youramoninstance/api/v1/servers/list/?api_key=apikey
 
-# Response
+// Response
 {
 	"status": 200, 
 	"servers": [
@@ -33,30 +34,36 @@ GET https://youramoninstance/api/v1/servers/list/?api_key=apikey
 			"last_check": 1428222753,
             "id": "5550cc601d41c83b0b510fc6"
 }
-</code></pre>
-<h3>Create</h3>
-<pre><code class='language-python'>
-# Request - will create a server and generate a random name
+
+```
+
+### Create Server
+
+```javascript
+// Request - will create a server and generate a random name
 GET https://youramoninstance/api/v1/servers/create/?api_key=apikey
 
-# Response
+ Response
 {
     "status": 200, 
     "name": "weathered-voice-23661", 
     "key": "wvskx5emjft6we3lm07f9uqya4f05s5v"
 }
 
-# Request - will create a server and generate a random name
+// Request - will create a server and generate a random name
 POST https://youramoninstance/api/v1/servers/create/?api_key=apikey
 
-# Request headers
+// Request headers
 Content-Type: application/json
 
-# Request content 
-# tags - optional, Syntax: group:tag or tag
-{"name": "yourservername", "tags": ["role:db"]}
+// Request content 
+// tags - optional, Syntax: group:tag or tag
+{
+    "name": "yourservername", 
+    "tags": ["role:db"]
+}
 
-# Response
+// Response
 {
     "status": 200, 
     "name": "yourservername", 
@@ -64,40 +71,43 @@ Content-Type: application/json
 }
 
 
-# Request content with server key
-# Randomly generated 32 characters long alpha numeric, lowercase string
-# tags - optional, Syntax: group:tag or tag
-{"name": "yourservername", 
-'key': 'wvskx5emjft6we3lm07f9uqya4f05s5v', 
-"tags": ["role:db"]}
+// Request content with server key
+// Randomly generated 32 characters long alpha numeric, lowercase string
+// tags - optional, Syntax: group:tag or tag
+{  
+    "name": "yourservername", 
+    'key': 'wvskx5emjft6we3lm07f9uqya4f05s5v', 
+    "tags": ["role:db"]
+}
 
-# Response
+// Response
 {
     "status": 200, 
     "name": "yourservername", 
     "key": "wvskx5emjft6we3lm07f9uqya4f05s5v"
 }
-</code></pre>
+```
 
-<h3>Delete</h3>
-<pre><code class='language-python'>
-# Request - will delete a server
-# PLEASE PROVIDE A SERVER_ID, NOT SERVER KEY
+### Delete Server
+
+```javascript
+// Request - will delete a server
 GET https://youramoninstance/api/v1/servers/delete/[server_id]/?api_key=apikey
 
-# Response
+// Response
 {
     "status": 200, 
 }
-</code></pre>
+```
 
-<h4 id="api-alerts">Alerts</h4>
-<h3>List</h3>
-<pre><code class='language-python'>
-# Request - will delete a server
+## Alerts
+
+### List Alerts
+
+```javascript// Request - will list all alerts
 GET https://youramoninstance/api/v1/alerts/list/?api_key=apikey
 
-# Response
+// Response
 {
     "status": 200, 
     "alerts": [
@@ -115,59 +125,65 @@ GET https://youramoninstance/api/v1/alerts/list/?api_key=apikey
         }, 
     ]
 }
-</code></pre>
-<h3>Mute</h3>
-<pre><code class='language-python'>
-# Request - will delete a server
+```
+
+### Mute Alert
+
+```javascript
+// Request - will mute and alert
 GET https://youramoninstance/api/v1/alerts/mute/[alert_id]/?api_key=apikey
 
-# Response
+// Response
 {
     "status": 200, 
     "muted": true
 }
-</code></pre>
-<h3>Mute All</h3>
-<pre><code class='language-python'>
-# Request - will delete a server
-GET https://youramoninstance/api/v1/alerts/mute/all/?api_key=apikey
-# Response
-{
-    "status": 200, 
-}
-</code></pre>
-<h3>Unmute All</h3>
-<pre><code class='language-python'>
-# Request - will delete a server
-GET https://youramoninstance/api/v1/alerts/unmute/all/?api_key=apikey
-# Response
-{
-    "status": 200, 
-}
-</code></pre>
+```
 
-<h4 id="api-cloudservers">Cloud Servers</h4>
-<h3>List</h3>
-<pre><code class='language-python'>
-# Request - will sync your cloud servers
+### Mute All Alerts
+
+```javascript
+// Request - will delete a server
+GET https://youramoninstance/api/v1/alerts/mute/all/?api_key=apikey
+// Response
+{
+    "status": 200, 
+}
+```
+### Unmute All
+```javascript
+// Request - will delete a server
+GET https://youramoninstance/api/v1/alerts/unmute/all/?api_key=apikey
+// Response
+{
+    "status": 200, 
+}
+```
+
+## Cloud Servers
+
+### List
+
+```javascript
+// Request - will sync your cloud servers
 GET https://youramoninstance/api/v1/cloudservers/sync/(amazon|digitalocean|rackspace|linode)/?api_key=apikey
 
-# Response
+// Response
 {
     "status": 200, 
     "message": "Amazon servers synced"
 }
-</code></pre>
-</section>
+```
 
 
-<h4 id="api-health-checks">Health Checks</h4>
-<h3>List</h3>
-<pre><code class='language-python'>
-# Request
+##  Health Checks
+
+### List Checks
+```javascript
+// Request
 GET https://youramoninstance/api/v1/healthchecks/list/?api_key=apikey
 
-# Response
+// Response
 {
     "status": 200, 
     "checks": [
@@ -193,55 +209,55 @@ GET https://youramoninstance/api/v1/healthchecks/list/?api_key=apikey
     ]
 
 }
-</code></pre>
+```
 
-<h3>Delete Check</h3>
-<pre><code class='language-python'>
-# Request - will delete a health check
+### Delete Check
+```javascript
+// Request - will delete a health check
 GET https://youramoninstance/api/v1/healthchecks/delete/[check_id]/?api_key=apikey
-# Response
+// Response
 {
     "status": 200, 
 }
-</code></pre>
+```
 
-<h3>Pause Check</h3>
-<pre><code class='language-python'>
-# Request - will pause a health check
+### Pause Check
+```javascript
+// Request - will pause a health check
 GET https://youramoninstance/api/v1/healthchecks/pause/[check_id]/?api_key=apikey
-# Response
+// Response
 {
     "status": 200, 
 }
-</code></pre>
+```
 
 
-<h3>Resume Check</h3>
-<pre><code class='language-python'>
-# Request - will resume a health check
+### Resume Check
+```javascript
+// Request - will resume a health check
 GET https://youramoninstance/api/v1/healthchecks/resume/[check_id]/?api_key=apikey
-# Response
+// Response
 {
     "status": 200, 
 }
-</code></pre>
+```
 
-<h3>Pause All</h3>
-<pre><code class='language-python'>
-# Request - will pause all health checks
+### Pause All
+```javascript
+// Request - will pause all health checks
 GET https://youramoninstance/api/v1/healthchecks/pause/all/?api_key=apikey
-# Response
+// Response
 {
     "status": 200, 
 }
-</code></pre>
+```
 
-<h3>Resume All</h3>
-<pre><code class='language-python'>
-# Request - will resume all health checks
+### Resume All
+```javascript
+// Request - will resume all health checks
 GET https://youramoninstance/api/v1/healthchecks/resume/all/?api_key=apikey
-# Response
+// Response
 {
     "status": 200, 
 }
-</code></pre>
+```

@@ -9,11 +9,12 @@
 	By default you can install it an all your servers with one line, displayed on your Servers page
 </p>
 
-<pre><code class='language-bash'>API_KEY=unique_api_key bash -c "$(curl -L http://youramoninstance/install/)"</code></pre>
-<p>This will install the APT/Yum packages for the Amon Agent and will prompt you for your password.
+```bash
+API_KEY=unique_api_key bash -c "$(curl -L http://youramoninstance/install/)"
+```
+This will install the APT/Yum packages for the Amon Agent and will prompt you for your password.
 <br><br>
-	By default the script installs:
-</p>
+By default the script installs:
 
 * The Amon agent to /opt/amonagent/amonagent and /usr/bin/amonagent (You can call amonagent from anywhere)
 
@@ -53,18 +54,17 @@ The configuration file has the following parameters:
 <p>
 The agent executable is located in
 <span class="code">/opt/amonagent/amonagent(/usr/bin/amonagent)</span> and accepts the following commands: </p>
-<ul>
-  <li>
-        <code class="language-bash">$ amonagent -test</code> - Collects all system metrics and displays the results in the terminal.
-  </li>
-</ul>
+
+* `$ amonagent -test` - Collects all system metrics and displays the results in the terminal.
+
 
 
 ## Manually installing the agent
 
 <p>If the automatic installer fails, you can easily install the agent manually by pasting the following commands in the terminal:
 </p>
-<pre ><code class="language-bash">
+
+```bash
 # On Debian/Ubuntu
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv AD53961F
 echo "deb http://packages.amon.cx/repo amon contrib" | sudo tee /etc/apt/sources.list.d/amon.list
@@ -87,15 +87,14 @@ echo '{
 }' > /etc/opt/amonagent/amonagent.conf
 
 sudo service amonagent restart (or) sudo systemctl restart amonagent
-</code></pre>
+```
 
 
 ## Debugging the Agent
 
-<p>
-	If you encountered an issue during the Agent installation please reach out to <a href="mailto:martin@amon.cx">martin@amon.cx</a>
-	with the contents of <span class="code">amonagent-install.log</span>
-</p>
+
+If you encountered an issue during the Agent installation please reach out to <a href="mailto:martin@amon.cx">martin@amon.cx</a>
+	with the contents of `amonagent-install.log`
 
 
 <p>
@@ -104,8 +103,7 @@ First, run the **status** command - <code class="language-bash">sudo service amo
 <br><br>
 If the agent is running, check if the Amon API is accessible from your server:
 </p>
-<pre class='language-bash'><code>$ amonagent -test</code>
-</pre>
+`$ amonagent -test`
 <p>
 <br>
 You should also check the logs: <span class="code">/var/log/amonagent.log</span>. Errors in the logs may also reveal the cause of any issues.
