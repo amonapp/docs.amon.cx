@@ -161,10 +161,10 @@ nav div.mainlogo img {
 
 /* Admonition */
 .admonition {
-  background: #e34b30;
+  background: #3cc05e;
 }
 .admonition.info {
-  background: #f5a623;
+  background: #3cc05e;
 }
 
 @media print {
