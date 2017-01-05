@@ -43,8 +43,12 @@ mkdir -p /opt/amon
 mkdir -p /var/log/amon
 mkdir -p /etc/opt/amon
 
-chown -R current_user:user_group /opt/amon
-chown -R current_user:user_group /etc/opt/amon
+# Create the amon user
+useradd --system --user-group --key USERGROUPS_ENAB=yes -M amon --shell /bin/false -d /etc/opt/amon
+
+chown -R amon:amon /opt/amon
+chown -R amon:amon /etc/opt/amon
+chown -R amon:amon /var/log/amon
 
 git clone https://github.com/amonapp/amon.git /opt/amon
 ```
@@ -59,6 +63,39 @@ python3 -m venv /opt/amon/env/
 # Activate the environment
 source /opt/amon/env/bin/activate
 pip install -r /opt/amon/requirements.txt
+
+# Create the database and check if Amon is running
+touch /etc/opt/amon/amon.yml
+cd /opt/amon
+python manage.py migrate
+python manage.py runserver
+```
+
+## Running Amon as a Service
+
+We recommend using whatever software you are most familiar with for managing Amon.
+
+For Debian, Ubuntu and other operating systems relying on systemd, you can follow the examples in this section.
+
+Configuring systemd requires 1 file. On Ubuntu 16.04, the files will be located in `/etc/systemd/system`. Create a file named `amon.service` with the contents listed below.
+
+To ensure that the service start up on reboots, run the following command: `systemctl enable amon.service`.
+
+
+```
+[Unit]
+Description=Amon
+After=network.target
+
+[Service]
+Type=simple
+User=amon
+Group=amon
+WorkingDirectory=/opt/amon/
+ExecStart=/opt/amon/env/bin/gunicorn wsgi -c /opt/amon/gunicorn.conf
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 
@@ -67,11 +104,26 @@ pip install -r /opt/amon/requirements.txt
 !!! note
     Before this step, please make sure that you have MongoDB 3.2+ running. The default version shipped in Ubuntu 16.04LTS is 2.6 which is not compatible with Amon.
 
-Next we move to actually configuring and running Amon. We start by creating the configuration directory for Amon:
+Next we move to actually configuring and running Amon. Configuring Amon requires 1 file located in `/etc/amon/amon.yml`. The file should have the following minimum contents. The SMTP settings are just an example, you can setup Amon to work with your prefered SMTP provider
 
 ```
-touch /etc/opt/amon/amon.yml
+host: https://amon.yourdomain.com
+smtp:
+  host: smtp.mailgun.org 
+  port: 587
+  username: amon_alerts
+  password: *********
+  use_tls: true
+  sent_from: alerts@yourdomain.com
 ```
+
+
+## Proxying with Nginx
+
+Nginx is a requirement for Amon - we are using it to provide SSL configuration and to server the static files. To get started, install the `nginx-full` module.
+
+
+Below is a sample production ready configuration for Nginx with Amon:
 
 
 
