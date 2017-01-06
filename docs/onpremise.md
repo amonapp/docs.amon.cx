@@ -67,7 +67,11 @@ pip install -r /opt/amon/requirements.txt
 # Create the database and check if Amon is running
 touch /etc/opt/amon/amon.yml
 cd /opt/amon
-python manage.py migrate
+python manage.py migrate 
+
+python manage.py installtasks  # Alert sending / Cloud Sync / Agent no data sent cron tasks
+
+# To test if Amon is configured properly
 python manage.py runserver
 ```
 
@@ -201,3 +205,11 @@ http {
 
 
 ## High Availability Deployment
+
+
+Amon scales quite well horizontally, however there is still a primary single point of failure at the database level. 
+
+In an HA setup, it is critical that you have a MongoDB setup with at least 1 master and 2 replicas, as defined <a href="https://docs.mongodb.com/manual/replication/">here</a>
+
+The other point of failure could be the alert sending mechanism - if you send a lot of alert emails via SMTP in short periods of time. In this case you should consider switching to one of the other notification providers like VictorOps or PagerDuty. 
+

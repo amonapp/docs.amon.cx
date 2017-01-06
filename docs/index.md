@@ -24,7 +24,7 @@ These pages describe how to configure and collect metrics with the Amon agent pl
 * [PostgreSQL](plugins#postgres)
 * [Redis](plugins#redis)
 * [MongoDB](plugins#mongodb)
-* [Custom Plugins](plugins#custom) - _A guide to writing your own custom plugins._
+* [Custom Plugins](plugins#custom-plugins) - _A guide to writing your own custom plugins._
 
 
 ## Notifications
