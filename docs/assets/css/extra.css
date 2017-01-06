@@ -14,12 +14,15 @@ body {
 }
 .backdrop-paper:after {
   border: 3px solid #f5f2f9;
-    box-shadow: 0 4px 0px rgba(0,0,0,0), 0 4px 12px rgba(0,0,0,0);
+  box-shadow: 0 4px 0px rgba(0,0,0,0), 0 4px 12px rgba(0,0,0,0);
 }
 @media only screen and (max-width: 959px) {
   .palette-primary-amon .project {
     background: #e34b30;
   }
+}
+.header {
+  box-shadow: 0 4px 0px rgba(0,0,0,0), 0 4px 12px rgba(0,0,0,0);
 }
 
 /* background: pd-navy */
@@ -303,15 +306,6 @@ iframe {
   margin: 0 auto;
   margin-top: 1em;
 }
-
-/* Contact summary table */
-#contact-summary {
-  margin-bottom: -2em;
-  background: #fff;
-  color: #000;
-}
-
-
 
 /* 404 Page */
 #error {

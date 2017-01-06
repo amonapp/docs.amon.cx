@@ -106,7 +106,7 @@ WantedBy=multi-user.target
 
 Next we move to actually configuring and running Amon. Configuring Amon requires 1 file located in `/etc/amon/amon.yml`. The file should have the following minimum contents. The SMTP settings are just an example, you can setup Amon to work with your prefered SMTP provider
 
-```
+```yaml
 host: https://amon.yourdomain.com
 smtp:
   host: smtp.mailgun.org 
@@ -124,6 +124,79 @@ Nginx is a requirement for Amon - we are using it to provide SSL configuration a
 
 
 Below is a sample production ready configuration for Nginx with Amon:
+
+
+```nginx
+worker_processes 4;
+user nobody nogroup;
+
+events {
+	worker_connections 1024;
+	accept_mutex off;
+}
+
+http {
+	include mime.types;
+	default_type application/octet-stream;
+	access_log off;
+	rewrite_log on;
+	sendfile on;
+	tcp_nopush on;
+	tcp_nodelay on;
+	keepalive_timeout 15;
+	types_hash_max_size 2048;
+	server_names_hash_bucket_size 64;
+	client_max_body_size 4G;
+
+
+	error_log /var/log/nginx.error.log ;
+	access_log /var/log/nginx.access.log;
+
+	upstream app_server {
+		server 127.0.0.1:9000 fail_timeout=15;
+	}
+
+
+	ssl_certificate   /etc/nginx/ssl/wildcard_yourdomain_com_bundle.cer;
+	ssl_certificate_key /etc/nginx/ssl/wildcard_yourdomain_com.key;
+	ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+	ssl_ciphers 'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA';
+	
+	 # Add perfect forward secrecy
+	ssl_prefer_server_ciphers on;
+
+	ssl_dhparam /etc/nginx/ssl/dhparams.pem;
+
+	 # Add HSTS
+	add_header Strict-Transport-Security "max-age=31536000; includeSubdomains";
+
+	server {
+		listen 80;
+  		server_name amon.yourdomain.com;
+  		return 301 https://amon.yourdomain.com$request_uri;
+	}
+
+	server {
+		listen 443 ssl;
+		listen [::]:443 ipv6only=on;
+		server_name  amon.yourdomain.com;
+		
+		location / {
+			proxy_read_timeout 30s;
+			proxy_buffering    off;
+			proxy_pass         http://app_server;
+			proxy_redirect     off;
+			proxy_set_header   Host $http_host;
+			proxy_set_header   X-Real-IP        $remote_addr;
+			proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+			proxy_set_header   X-Forwarded-Protocol ssl;
+	  }
+
+	}
+
+}
+
+```
 
 
 
