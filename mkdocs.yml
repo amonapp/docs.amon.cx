@@ -3,7 +3,6 @@ site_name: Amon Documentation
 site_author: Simplistic LLC.
 site_favicon: 'assets/img/icon.png'
 site_url: https://docs.amon.cx
-base_url: https://docs.amon.cx
 
 # Repository
 repo_name: 'GitHub'
