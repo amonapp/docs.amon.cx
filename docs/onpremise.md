@@ -108,7 +108,7 @@ WantedBy=multi-user.target
 !!! note
     Before this step, please make sure that you have MongoDB 3.2+ running. The default version shipped in Ubuntu 16.04LTS is 2.6 which is not compatible with Amon.
 
-Next we move to actually configuring and running Amon. Configuring Amon requires 1 file located in `/etc/amon/amon.yml`. The file should have the following minimum contents. The SMTP settings are just an example, you can setup Amon to work with your prefered SMTP provider
+Next we move to actually configuring and running Amon. Configuring Amon requires 1 file located in `/etc/opt/amon/amon.yml`. The file should have the following minimum contents. The SMTP settings are just an example, you can setup Amon to work with your prefered SMTP provider
 
 ```yaml
 host: https://amon.yourdomain.com
@@ -157,7 +157,7 @@ http {
 	access_log /var/log/nginx.access.log;
 
 	upstream app_server {
-		server 127.0.0.1:9000 fail_timeout=15;
+		server 127.0.0.1:8000 fail_timeout=15;
 	}
 
 
@@ -196,7 +196,14 @@ http {
 			proxy_set_header   X-Forwarded-Protocol ssl;
 	  }
 
+	    location /static {   
+        	autoindex on;   
+        	alias /opt/amon/amon/static;   
+    	}
+
 	}
+
+
 
 }
 
