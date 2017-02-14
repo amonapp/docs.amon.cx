@@ -6,7 +6,7 @@ site_url: https://docs.amon.cx
 
 # Repository
 repo_name: 'GitHub'
-repo_url: https://github.com/amonapp/amon-docs
+repo_url: https://github.com/amonapp/amon
 
 # Copyright
 copyright: 'Copyright &copy; Simplistic LLC.'
@@ -16,7 +16,7 @@ theme: 'material'
 theme_dir: 'theme'
 extra_css: ['assets/css/extra.css']
 extra:
-  logo: 'assets/img/icon.svg'
+  logo: 'assets/img/icon.png'
   palette:
     primary: 'amon'
     accent: 'blue grey'

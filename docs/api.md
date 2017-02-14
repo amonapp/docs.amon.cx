@@ -104,7 +104,9 @@ GET https://youramoninstance/api/v1/servers/delete/[server_id]/?api_key=apikey
 
 ### List Alerts
 
-```javascript// Request - will list all alerts
+
+```javascript
+// Request - will list all alerts
 GET https://youramoninstance/api/v1/alerts/list/?api_key=apikey
 
 // Response

@@ -9,7 +9,7 @@ body {
 .repo a {
   background: #e34b30;
 }
-.backdrop {
+.md-backdrop {
   background: white;
 }
 .backdrop-paper:after {
@@ -21,138 +21,98 @@ body {
     background: #e34b30;
   }
 }
-.header {
+.md-header {
   box-shadow: 0 4px 0px rgba(0,0,0,0), 0 4px 12px rgba(0,0,0,0);
 }
 
 /* background: pd-navy */
 .palette-primary-amon,
-.palette-primary-amon .footer,
-.palette-primary-amon .header,
+.md-footer-nav,
+.md-header,
 .palette-primary-amon .results .meta,
 .palette-primary-amon .article table th {
   background: #1f293a;
 }
 
-.palette-primary-amon .article table th {
-  background: #555;
-}
-
-.palette-primary-amon .article h1,
-.palette-primary-amon .article h2,
-.palette-primary-amon .drawer .toc a.current,
-.palette-primary-amon .drawer .toc a:focus,
-.palette-primary-amon .drawer .toc a:hover,
-.palette-primary-amon .article a:hover {
-  color: #e34b30;
-}
-
-.palette-primary-amon .article a,
-.palette-primary-amon .article code,
-.palette-primary-amon .article h1,
-.palette-primary-amon .article h2 {
-  color: #1f293a;
-}
-
-.palette-primary-amon .article .headerlink {
-  color: rgba(0,0,0,.26);
-}
-
-
-/* Selected nav section */
-.palette-primary-amon .drawer .anchor a {
-  border-left: 0;
-}
-
-/* Hide the page title, already in the navbar */
-.article h1 {
+.md-footer-meta {
   display: none;
 }
 
-.article {
+.md-content table th {
+  background: #555;
+}
+
+.md-article h1,
+.md-article h2,
+.md-nav__link--active,
+.md-sidebar--primary a.current,
+.md-sidebar--primary a:focus,
+.md-sidebar--primary a:hover,
+.md-nav--secondary a:hover,
+.md-content a:hover {
+  color: #e34b30;
+}
+
+.md-content a {
+  color: #1f293a;
+  border-bottom: 1px dotted;
+}
+
+/* Hide the page title, already in the navbar */
+.md-article h1 {
+  display: none;
+}
+
+.md-article,
+.md-typeset {
 	font-size: 1.5em;
 }
-.article li {
+.md-article li {
   margin-left: 0;
   margin-top: 1em;
-   margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 /* Too much whitespace at the top, not enough at bottom */
-.article .wrapper {
+.md-article {
   padding: 56px 16px 132px !important;
 }
 
-@media only screen and (min-width: 720px) {
-  .article .wrapper {
-    padding: 70px 24px 126px !important;
-  }
-}
-
-/* Get rid of the whitespace when printing, let people set own margins. */
-@media print {
-  .article .wrapper {
-    padding: 0em !important;
-  }
+.md-main__inner {
+  margin-top: 3.6rem;
 }
 
 ul, ol {
   padding-left: 1em;
   padding-top: 1em;
 }
-.drawer .toc li ul {
-  padding-left: 0;
+.md-sidebar--primary label {
+  display: none;
 }
-.drawer {
+.md-sidebar--primary li {
+  padding-left: 0;
+  padding-bottom: 10px
+}
+.md-sidebar--primary {
   font-size: 14px;
 }
 
-/* Expanding border menu */
-.drawer .toc li a {
-	overflow: hidden;
-	position: relative;
-  border-left: 0;
-}
-
-.drawer .toc li a:before {
-  display: block;
-  content: '';
-  position: absolute;
-  height: 2em;
-  left: 0px;
-  top: 0.5em;
-  border-left: 5px solid #e34b30;
-  transform: scaleY(0);
-  transition: transform 250ms ease-in-out;
-}
-
-.drawer .toc li a:hover:before {
-	transform: scaleY(1);
-}
-
-/* Don't do it on active menu items */
-.drawer .toc a.current:hover:before,
-.drawer .toc li.anchor a:hover:before {
-  transform: scaleY(0);
-	display: none;
-}
-
 /* Don't overflow horizontally on nav */
-.drawer .toc ul li a {
+.md-sidebar--primary ul li a {
 	white-space: nowrap;
 	text-overflow: ellipsis;
+  font-size: 16px;
 }
-
-/* Change the title bar to include the PD logo */
-nav div.mainlogo {
-	width: 15em;
-	display: table-cell;
+.md-nav--secondary {
+    border-left: .4rem solid #1f293a;
 }
-
-nav div.mainlogo a {
+.md-header-nav__button.md-logo img {
+  display: none;
+}
+.md-header-nav__button.md-logo {
   min-height: 5em;
   margin-bottom: -2.1em;
-  width: 13em;
+  width: 4.4em;
 
   background: url(/assets/img/logo-white-text.png) 0em 0.1em no-repeat;
   background-size: contain;
@@ -165,6 +125,7 @@ nav div.mainlogo img {
 /* Admonition */
 .admonition {
   background: #3cc05e;
+  color: white;
 }
 .admonition.info {
   background: #3cc05e;
@@ -182,9 +143,6 @@ h4 {
   text-decoration: underline;
 }
 
-.project .logo+.name {
-	font-size: 13px;
-}
 
 span.bad {
   color: #f00;
@@ -196,12 +154,11 @@ span.good {
 
 span.code,
 code {
-  font-family: monospace;
   border-radius: 4px;
-  background: #f5f2f9;
+  background: hsla(0,0%,93%,.5);
   color: #382937 !important;
 }
-li code {
+.md-content  li code {
   padding: 0.5em;
 }
 pre{
@@ -222,17 +179,17 @@ pre{
 }
 
 /* Center all images */
-.article img {
+.md-content img {
     display: block;
     margin: 0 auto;
 }
 
-.article code {
-  background: #f5f2f9;
+.md-content  code {
+  background: hsla(0,0%,93%,.5);
 }
 
 /* Header images */
-.article h1 + p + p img {
+.md-content  h1 + p + p img {
   max-width: 110%;
   margin-left: -2em;
 }

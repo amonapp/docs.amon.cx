@@ -99,7 +99,7 @@ If you encountered an issue during the Agent installation please reach out to <a
 
 <p>
 If you get the Agent installed but you are not seeing any data in Amon, you can troubleshoot in the following manner. <br>
-First, run the **status** command - <code class="language-bash">sudo service amonagent status (or) sudo systemctl status amonagent</code>.
+First, run the <strong>status</strong> command - <code class="language-bash">sudo service amonagent status (or) sudo systemctl status amonagent</code>.
 <br><br>
 If the agent is running, check if the Amon API is accessible from your server:
 </p>
