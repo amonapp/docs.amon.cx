@@ -110,8 +110,7 @@ ul, ol {
   display: none;
 }
 .md-header-nav__button.md-logo {
-  min-height: 5em;
-  margin-bottom: -2.1em;
+  min-height: 2em;
   width: 4.4em;
 
   background: url(/assets/img/logo-white-text.png) 0em 0.1em no-repeat;
