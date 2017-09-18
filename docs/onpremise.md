@@ -55,7 +55,7 @@ git clone https://github.com/amonapp/amon.git /opt/amon
 
 ### Setting up an Environment
 
-Next you will need to setup a Python environment for the Amon dependecies. Choose a location for the environment and create it with the following command. For out guide, we are goind to choose `/opt/amon/env/`
+Next you will need to setup a Python environment for the Amon dependecies. Choose a location for the environment and create it with the following command. For our guide, we are going to choose `/opt/amon/env/`.
 
 ```
 python3 -m venv /opt/amon/env/
